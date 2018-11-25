@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Send_Invoice
 {
-    public partial class Form1 : Form
+    public partial class mainForm : Form
     {
-        public Form1()
+        public mainForm()
         {
             InitializeComponent();
+        }
+
+        private void mainForm_Load(object sender, EventArgs e)
+        {
+            DateTime today = DateTime.Now;
+
+            dateLabel.Text = today.ToLongDateString();
         }
     }
 }
